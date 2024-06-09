@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMIT Course Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="formpg.css">
+    <link rel="shortcut icon" href="smit.png" type="image">
+<body>
+
+    <div class="container">
+    <h1 class="title">SMIT Admission Registration Form</h1>
+
+        <div class="separator"></div>
+        <form id="courseForm" action="submit_course.php" method="post" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="father_name">Father's Name:</label>
+            <input type="text" id="father_name" name="father_name" required>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="contact_number">Contact Number:</label>
+            <input type="tel" id="contact_number" name="contact_number" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="courses">Courses:</label>
+            <select id="courses" name="courses[]" multiple required>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="PHP">PHP</option>
+                <option value="SQL">SQL</option>
+                <option value="C++">C++</option>
+                <option value="C#">C#</option>
+                <option value="Ruby">Ruby</option>
+            </select>
+            
+            <label>Mode of Learning:</label>
+            <div class="radio-group">
+                <input type="radio" id="onsite" name="mode" value="onsite" required>
+                <label for="onsite">Onsite</label>
+                <input type="radio" id="online" name="mode" value="online" required>
+                <label for="online">Online</label>
+            </div>
+            
+            <label>Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+            
+            <label for="city">City:</label>
+            <select id="city" name="city" required>
+                <option value="Karachi">Karachi</option>
+                <option value="Lahore">Lahore</option>
+                <option value="Islamabad">Islamabad</option>
+                <option value="Rawalpindi">Rawalpindi</option>
+                <option value="Faisalabad">Faisalabad</option>
+            </select>
+            
+            <label for="photo" class="file-upload">
+                <span>Upload a photo of yourself</span>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+            </label>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
